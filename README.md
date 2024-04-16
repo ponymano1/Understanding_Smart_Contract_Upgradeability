@@ -48,7 +48,7 @@ sequenceDiagram
 
 ## Upgrade Principles
 ### Using Proxy Contracts
-![using proxy contract](./img/contractUpgrade.png)
+![using proxy contract](img/contractUpgrade.PNG)
 Here is a simplified version of a proxy contract:
 ```solidity
 contract Proxy {
