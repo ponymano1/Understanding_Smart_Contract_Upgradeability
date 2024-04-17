@@ -120,8 +120,13 @@ sequenceDiagram
     deactivate Proxy
 ```
 ### Initialization
+In upgradeable contracts, it's recommended to use a separate initialize function for initialization rather than the constructor. This is due to the way proxy contracts work.
 
-### Resolving Code Conflicts
+When a proxy contract is used, the constructor of the implementation contract is not called. This is because the constructor is only called when the contract is first created and deployed to the blockchain, and with a proxy contract, the implementation contract is not the contract that's actually deployed.
 
-#### 函数冲突
-#### 变量存储冲突
+Instead, the proxy contract is deployed and it delegates calls to the implementation contract. Because of this, the constructor of the implementation contract is not called, and any initialization that needs to happen must occur in a separate initialize function.
+
+This initialize function is then called after the contract is deployed, and it can be structured in a way to ensure that it can only be called once, similar to a constructor.
+
+### General Contract Upgrade
+#### 
