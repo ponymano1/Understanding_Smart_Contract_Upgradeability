@@ -129,4 +129,4 @@ Instead, the proxy contract is deployed and it delegates calls to the implementa
 This initialize function is then called after the contract is deployed, and it can be structured in a way to ensure that it can only be called once, similar to a constructor.
 
 ### General Contract Upgrade
-#### 
+#### UUPS and Transparent Proxy
